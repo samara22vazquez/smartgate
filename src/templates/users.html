@@ -1,0 +1,29 @@
+<html>
+   <body>
+   
+      <table border = 1>
+         <thead>
+            <td>Username</td>
+
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["Username"]}}</td>
+
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+        <form action="/delete" method="POST">
+                Select the username to delete:<br>
+                <input type="text" name="user"><br/>
+    
+                <input type="submit" value="Delete User" class="btn btn-primary" style="color:white;"><br/><br/>
+            </form>
+
+        
+        
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html public "-//w3c//dtd html 3.2 //en">
+<html>
+
+    <head>
+        <title>ParentPortal v0.1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body style="background-color:#111144;">
+    <div class="container">
+        <h1 style="color:white;">Gate Opening Angles</h1>
+        <h4 style="color:#bbbbcc;">Current angles:</h4>
+        <h5 style="color:#bbbbcc;">Left: <span style="color:white;">{{a}}&deg;</span><br/>
+            Right: <span style="color:white;">{{b}}&deg;</span></h5>
+        <h4 style="color:#dd4444;">Updated.</h4>
+        <h5 style="color:#bbbbcc;">A 0&deg; angle means the gate shall not open in that direction.
+            It will automatically open the other way regardless of approach.<br/><br/>
+            Set new angles:</h5>
+
+        <form action="./set" method="POST" style="color:white;">
+            <div class="row">
+                <div class="col-sm-2">
+                    <p>Left:</p>
+                </div>
+                <div class="col-sm-2">
+                    <span style="color:black;">
+                    <input name="left_angle" type="number" value={{a}} min="0" max="100">                    
+                    </span>
+                </div>
+            </div><br/>
+            <div class="row">
+                <div class="col-sm-2">
+                    <p>Right:</p>
+                </div>
+                <div class="col-sm-2">
+                    <span style="color:black;">
+                    <input name="right_angle" type="number" value={{b}} min="0" max="100">
+                    </span>
+                </div>
+            </div><br/>
+            <input type="submit" value="submit" class="btn btn-primary"><br/><br/>
+        </form>        
+        
+        <a href="../menu">Back to Menu</a><br/>
+        
+        <h6 style="color:white;">2018 CODFISH, Cortana</h6>
+    </div>
+    </body>
+    
+</html>

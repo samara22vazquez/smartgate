@@ -1,0 +1,47 @@
+<!doctype html public "-//w3c//dtd html 3.2 //en">
+<html>
+
+    <head>
+        <title>ParentPortal v0.1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <body style="background-color:#111144;">
+    <div class="container">
+        <h1 style="color:white;">Existing Start/Stop Times</h1>
+        <h5 style="color:#bbbbcc;">Below is a list of specified periods where the gate will
+            remain in the associated mode.</h5>
+            
+        <table border="1" style="color:white;" class="table table-bordered">
+            <thead>
+            <td>Start</td>
+            <td>Stop</td>
+            <td>Mode</td>
+            </thead>
+         
+            {% for row in rows %}
+                <tr>
+                <td>{{row["start"]}}</td>
+                <td>{{row["stop"]}}</td>
+                <td>{{row["mode"]}}</td>
+                </tr>
+            {% endfor %}         
+        </table><br/>
+
+        <div class="btn-group-vertical" role="group">
+            <a href="./settings" class="btn btn-primary">Add New Time</a>
+            <a href="./settings/delete" class="btn btn-danger">Reset Time Config</a>            
+        </div></br></br>
+        
+        <a href="./menu">Back to Menu</a>
+                 
+        <h6 style="color:white;">2018 CODFISH, Cortana</h6>
+        
+    </div>
+    </body>
+   
+</html>

@@ -1,0 +1,33 @@
+<!doctype html public "-//w3c//dtd html 3.2 //en">
+<html>
+
+    <head>
+        <title>ParentPortal v0.1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body style="background-color:#111144;">
+    <div class="container">
+        <h1 style="color:white;">Intruder Images</h1>
+        <h5 style="color:#bbbbcc;">Images captured by the camera while in secure mode.</h5>
+
+        <img style="color:white;" src="/static/{{a}}.jpg?{{d}}" height="300" alt="{{a}}.jpg is empty" /><br/><br/>
+
+        <div class="btn-group" role="group">
+            <a href="./../intruders/{{c}}" class="btn btn-primary">&larr; PREV</a>
+            <a href="./../intruders/{{b}}" class="btn btn-primary">NEXT &rarr;</a>
+        </div>
+        <br/><br/>
+        <a href="./../intruderdelete" class="btn btn-danger">Delete All Images</a><br/><br/>
+
+        <a href="./../menu">Back to Menu</a><br/>
+        
+        <h6 style="color:white;">2018 CODFISH, Cortana</h6>
+    </div>
+    </body>
+    
+</html>

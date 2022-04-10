@@ -1,0 +1,46 @@
+<!doctype html public "-//w3c//dtd html 3.2 //en">
+<html>
+
+    <head>
+        <title>ParentPortal v0.1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body        
+        {% if session['username'] == 'geoff' %}
+            background="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwidgets.ecs.soton.ac.uk%2Fimage.php%3Fid%3Dperson_6893%26maxw%3D250%26maxh%3D300%26corners%3D0%26edge%3D1%26checksum%3Ddcac77bffe3864f8b23ccf576be22634&f=1"
+        {% else %}
+            style="background-color:#111144;"
+        {% endif %}>
+
+        <!-- ^^ testing jquery conditionals -->
+        
+        <div class="container">
+            <h1 style="color:white;"><span style="color:#f9982c">P</span>arent<span style="color:#27a7e7">P</span>ortal Menu</h1>
+            <h4 style="color:#bbbbcc;">Current Gate Status: <span style="color:white;">{{a}}</span><br/>
+                Current Mode: <span style="color:white;">{{b}}</span></h4>
+            <h5 style="color:#bbbbcc;">Select Parameter:</h5>
+
+            <div class="btn-group-vertical" role="group">
+                <a class="btn btn-primary" href="./mode">Set gate mode</a>
+                <a class="btn btn-primary" href="./opentime">Set open time</a>
+                <a class="btn btn-primary" href="./angle">Set opening angles</a>
+                <a class="btn btn-primary" href="./intruders/1">Intruder images</a>
+                <a class="btn btn-primary" href="./settings">Add new timed modes</a>
+                <a class="btn btn-primary" href="./configuration">Show timed modes config</a>
+                <a class="btn btn-primary" href="./logout">LOGOUT</a>
+            </div><br/><br/>
+
+            <a href="./user_display">Manage Users</a>
+
+                 
+            <h6 style="color:white;">2018 CODFISH, Cortana</h6>
+
+        </div>
+    </body>
+    
+</html>

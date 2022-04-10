@@ -1,0 +1,31 @@
+<!doctype html public "-//w3c//dtd html 3.2 //en">
+<html>
+
+    <head>
+        <title>ParentPortal v0.1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body style="background-color:#111144;">
+    <div class="container">
+        <h1 style="color:white;">Open Time</h1>
+        <h4 style="color:#bbbbcc;">Defines the time for which the gate remains open.<br/><br/>
+            Current value: <span style="color:white;">{{a}}</span>s</h4>
+        <h5 style="color:#bbbbcc;">Set New Value (s):</h5>
+        
+        <form action="./opentime/set" method="POST">
+            <input name="open_time" type="number" value={{a}} min="0" max="60" style="color:black;"><br/><br/>            
+            <input class="btn btn-primary" type="Submit" value="submit"><br/><br/>
+        </form>
+
+        <a href="./menu">Back to Menu</a><br/>
+        
+        <h6 style="color:white;">2018 CODFISH, Cortana</h6>
+    </div>
+    </body>
+    
+</html>

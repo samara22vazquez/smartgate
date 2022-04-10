@@ -1,0 +1,42 @@
+<!doctype html public "-//w3c//dtd html 3.2 //en">
+<html>
+
+    <head>
+        <title>ParentPortal v0.1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <body style="background-color:#111144;">
+    <div class="container">
+
+        <h1 style="color:white;">Welcome to <span style="color:#f9982c">P</span>arent<span style="color:#27a7e7">P</span>ortal</h1>
+        <h5 style="color:#bbbbcc;">Please Login:</h5>
+
+        {% block body %}
+        {% if session['logged_in'] %}
+            <p style="color:white;">You're logged in already! Or deleted a user other than yourself.</p>
+
+            <a href="./../menu">Back to Menu</a><br/>
+        {% else %}
+            <form action="/login" method="POST"  style="color:black;">
+                <input type="username" name="username" placeholder="Username" style="width:200px"><br/>
+                <input type="password" name="password" placeholder="Password" style="width:200px"><br/><br/>
+                <input type="submit" value="Login" class="btn btn-primary" style="color:white;"><br/><br/>
+            </form>
+
+        <h6 style="color:#bbbbcc;">If you are not yet registered, please do so below:</h6>
+        <a href="./register"><button type="button" class="btn btn-danger">Register</button></a><br/>
+        {% endif %}
+        {% endblock %}
+
+        <br/><h6 style="color:white;">2018 CODFISH, Cortana</h6>
+
+    </div>
+    </body>
+
+</html>
+
